@@ -59,4 +59,4 @@ for link in links:
 
 for x in link_objects:
     print x
-    print x.avg_relative_density(link_objects, 7)
+    print x.avg_relative_density(link_objects, K)
