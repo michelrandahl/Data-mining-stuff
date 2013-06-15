@@ -4,6 +4,7 @@ class link_object:
     def __init__(self,link):
         self.link = link
         self.vector = [ord(c) for c in link]
+        self.k_nearest = None
 
     def distance(self, other):
         vec1 = self.vector
@@ -16,13 +17,14 @@ class link_object:
         return sqrt(sum([(vec1[i] - vec2[i])**2 for i in range(len(vec1))]))
 
     def getKNearest(self, k, link_objects):
-        distances = []
-        for obj in link_objects:
-            if obj.link == self.link: continue
-            distances.append( (self.distance(obj),obj) )
-
-        distances.sort(key = lambda x: x[0])
-        return distances[:k]
+        if self.k_nearest is None: 
+            distances = []
+            for obj in link_objects:
+                if obj.link == self.link: continue
+                distances.append( (self.distance(obj),obj) )
+            distances.sort(key = lambda x: x[0])
+            self.k_nearest = distances[:k]
+        return self.k_nearest
 
     def density(self, link_objects, k):
         k_nearest = self.getKNearest(k, link_objects)
