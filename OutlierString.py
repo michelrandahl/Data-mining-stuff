@@ -1,3 +1,8 @@
+"""
+Converts strings to ascii vectors and compares by density.
+There are likely better ways to find string outliers, 
+but it would probably be interesting to use some of this sample on a real dataset converted to vectors
+"""
 from math import sqrt
 
 class link_object:
