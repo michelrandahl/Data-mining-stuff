@@ -1,7 +1,7 @@
 """
-Converts strings to ascii vectors and compares by density.
-There are likely better ways to find string outliers, 
-but it would probably be interesting to use some of this sample on a real dataset converted to vectors
+Converts strings to ascii vectors and compares/scores by density.
+There are likely better ways to find string outliers, this is just a toy example for finding outliers.
+Tt would probably be interesting to use some of this sample on a real dataset converted to vectors.
 """
 from math import sqrt
 
