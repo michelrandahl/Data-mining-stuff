@@ -1,4 +1,8 @@
 """
+This code is derived with inspiration form formulas and pseudo code from 
+section 10.4.1 (Detection of Outliers Using Relative Density) in the book
+'Introduction to Data Mining, by Pang-Ning Tan & Michael Steinbach'.
+
 Converts strings to ascii vectors and compares/scores by density.
 There are likely better ways to find string outliers, this is just a toy example for finding outliers.
 It would probably be interesting to use some of this sample on a real dataset converted to vectors.
